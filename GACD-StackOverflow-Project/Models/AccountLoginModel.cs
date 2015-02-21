@@ -8,9 +8,13 @@ namespace GACD_StackOverflow_Project.Models
 {
     public class AccountLoginModel
     {
-        [Required(ErrorMessage = "este campo es obligatorio")]
+        
+        [Required(ErrorMessage = "*This Field is required")]
+        [DataType(DataType.EmailAddress)]
+        public string  E_mail{ get; set; }
 
-        public string Username { get; set; }
+        [Required(ErrorMessage = "*This Field is required")]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
     }
 
