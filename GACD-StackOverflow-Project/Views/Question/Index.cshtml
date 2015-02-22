@@ -1,0 +1,28 @@
+﻿@model GACD_StackOverflow_Project.Models.QuestionListModel
+
+@{
+    ViewBag.Title = "Index";
+    
+    
+    
+}
+
+<h2>Index</h2>
+<table class="table">
+    <tr>
+        <th>
+
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Votes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreationDateQuestion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerUsername)
+        </th>
+        <th></th>
+    </tr>
+ </table >

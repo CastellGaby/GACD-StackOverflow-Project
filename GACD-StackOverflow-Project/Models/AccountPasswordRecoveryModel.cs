@@ -8,9 +8,9 @@ namespace GACD_StackOverflow_Project.Models
 {
     public class AccountPasswordRecoveryModel
     {
-        
+        [Required]
         public string Username { get; set; }
-
+        
         [Required(ErrorMessage = "*This Field is required")]
         [DataType(DataType.EmailAddress)]
         public string E_mail { get; set; }
