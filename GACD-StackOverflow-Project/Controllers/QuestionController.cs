@@ -16,16 +16,27 @@ namespace GACD_StackOverflow_Project.Controllers
         {
 
             List<QuestionListModel> models = new ListStack<QuestionListModel>();
-            QuestionListModel modelIndex = new QuestionListModel();
-            modelIndex.Title = "Why so searius?";
-            modelIndex.OwnerUsername = "CastellDraco";
-            modelIndex.Votes = 5;
-            modelIndex.CreationDateQuestion = DateTime.Now;
-            modelIndex.OwnerUserId = Guid.NewGuid();
-            modelIndex.QuestionId = Guid.NewGuid();
-            models.Add(modelIndex);
+            QuestionListModel modelTest = new QuestionListModel();
+            modelTest.Title = "Why so serius?";
+            modelTest.OwnerUsername= "CastellDraco";
+            modelTest.Votes = 1;
+            modelTest.CreationDateQuestion = DateTime.Now;
+            modelTest.OwnerUserId = Guid.NewGuid();
+            modelTest.QuestionId = Guid.NewGuid();
 
-            return View(modelIndex);
+            models.Add(modelTest);
+            QuestionListModel model2 = new QuestionListModel();
+            model2.Title = "How do a excersice";
+            model2.OwnerUsername = "LoboAcompañado";
+            model2.Votes = 1;
+            model2.CreationDateQuestion = DateTime.Now;
+            model2.OwnerUserId = Guid.NewGuid();
+            model2.QuestionId = Guid.NewGuid();
+
+            models.Add(model2);
+            //return View(new List<QuestionListModel>());
+            return View(models);
+
         }
 
         public ActionResult AskQuestion()

@@ -1,28 +1,51 @@
-﻿@model GACD_StackOverflow_Project.Models.QuestionListModel
+﻿@model IEnumerable<GACD_StackOverflow_Project.Models.QuestionListModel>
 
 @{
     ViewBag.Title = "Index";
-    
-    
-    
 }
 
-<h2>Index</h2>
+<h2>MiniStackOverflow</h2>
+
+<p>
+    @Html.ActionLink("Create New Question", "AskQuestion")
+</p>
 <table class="table">
     <tr>
         <th>
-
             @Html.DisplayNameFor(model => model.Title)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Votes)
+            @Html.DisplayNameFor(model => model.OwnerUsername)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CreationDateQuestion)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.OwnerUsername)
+            @Html.DisplayNameFor(model => model.Votes)
         </th>
         <th></th>
     </tr>
- </table >
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink(item.Title, "AskQuestion", new { id = item.QuestionId })
+           @*@Html.DisplayFor(modelItem => item.Title)*@ 
+        </td>
+        <td>
+            @Html.ActionLink(item.OwnerUsername, "Profile", "Account",new { id = item.QuestionId },null)
+            @*@Html.DisplayFor(modelItem => item.OwnerUsername)*@
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreationDateQuestion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Votes)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) 
+        </td>
+    </tr>
+}
+
+</table>

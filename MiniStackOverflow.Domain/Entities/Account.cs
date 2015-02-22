@@ -4,7 +4,7 @@ namespace MiniStackOverflow.Domain.Entities
 {
     public class Account : IEntity
     {
-        public Guid Id { get; private set; }
+        public Guid Id { get; set; }
 
         public Account()
         {
