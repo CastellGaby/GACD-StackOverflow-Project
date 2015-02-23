@@ -1,4 +1,6 @@
-﻿@model GACD_StackOverflow_Project.Models.AccountProfileModel
+﻿@using System.Web.Mvc.Html
+@using Microsoft.AspNet.Identity
+@model GACD_StackOverflow_Project.Models.AccountProfileModel
 
 @{
     ViewBag.Title = "Profile";
@@ -8,13 +10,17 @@
 
 <div>
     <h4>Profile</h4>
-	<hr />
+    <hr/>
+@if (Request.IsAuthenticated)
+{
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Username)
         </dt>
 
         <dd>
+            @Html.ActionLink(User.Identity.Name, "Profile", "Account", routeValues: null, htmlAttributes: new {title = "Manage"})
+
             @Html.DisplayFor(model => model.Username)
         </dd>
 
@@ -23,6 +29,7 @@
         </dt>
 
         <dd>
+            @Html.ActionLink(User.Identity.GetUserName(), "Profile", "Account", routeValues: null, htmlAttributes: new { title = "Manage" })
             @Html.DisplayFor(model => model.Name)
         </dd>
 
@@ -31,6 +38,7 @@
         </dt>
 
         <dd>
+           
             @Html.DisplayFor(model => model.Lastname)
         </dd>
 
@@ -43,8 +51,26 @@
         </dd>
 
     </dl>
+
+ }
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOut", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                @Html.ActionLink(User.Identity.GetUserName(), "Profile", "Account", routeValues: null, htmlAttributes: new { title = "Manage" })
+            </li>
+            <li><a href="javascript:document.getElementById('logoutForm').submit()">Log out</a></li>
+        </ul>
+    }
+}

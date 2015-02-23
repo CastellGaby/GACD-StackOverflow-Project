@@ -233,6 +233,7 @@
     <Content Include="Views\Account\Profile.cshtml" />
     <Content Include="Views\Question\AskQuestion.cshtml" />
     <Content Include="Views\Question\Index.cshtml" />
+    <Content Include="Views\Question\_MenuPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
