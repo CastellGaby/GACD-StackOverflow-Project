@@ -186,3 +186,7 @@ C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-P
 C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\GACD-StackOverflow-Project\obj\Debug\GACD-StackOverflow-Project.csprojResolveAssemblyReference.cache
 C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\GACD-StackOverflow-Project\obj\Debug\GACD-StackOverflow-Project.dll
 C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\GACD-StackOverflow-Project\obj\Debug\GACD-StackOverflow-Project.pdb
+C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\GACD-StackOverflow-Project\bin\MiniStackOverflow.DataDeployed.dll
+C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\GACD-StackOverflow-Project\bin\MiniStackOverflow.Domain.dll
+C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\GACD-StackOverflow-Project\bin\MiniStackOverflow.DataDeployed.pdb
+C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\GACD-StackOverflow-Project\bin\MiniStackOverflow.Domain.pdb

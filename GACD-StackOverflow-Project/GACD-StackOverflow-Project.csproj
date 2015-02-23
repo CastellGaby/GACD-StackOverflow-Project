@@ -173,6 +173,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AnswerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QuestionController.cs" />
     <Compile Include="Global.asax.cs">
@@ -242,6 +243,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MiniStackOverflow.DataDeployed\MiniStackOverflow.DataDeployed.csproj">
+      <Project>{30C022E5-2FD1-487F-BA77-6DE63AFEF060}</Project>
+      <Name>MiniStackOverflow.DataDeployed</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MiniStackOverflow.Domain\MiniStackOverflow.Domain.csproj">
+      <Project>{AE549239-A973-4ECB-B34C-1ABAD5B13214}</Project>
+      <Name>MiniStackOverflow.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

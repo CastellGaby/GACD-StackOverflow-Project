@@ -6,19 +6,17 @@ using System.Threading.Tasks;
 
 namespace MiniStackOverflow.Domain.Entities
 {
-    class Question:IEntity
+    public class Question:IEntity
     {
         public Guid Id{ get; set;}
         public Question()
         {
             Id = Guid.NewGuid();
         }
-/*
-        public int Votes { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public Account Owner { get; set; }
+        public Account OwnerUsername { get; set; }
         public DateTime CreationDate { get; set; }
-        public DateTime ModificaDate { get; set; }*/
+        public int Votes { get; set; }
     }
 }

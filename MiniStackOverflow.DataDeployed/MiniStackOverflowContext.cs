@@ -11,5 +11,6 @@ namespace MiniStackOverflow.DataDeployed
     public class MiniStackOverflowContext:DbContext
     {
         public DbSet<Account> Accounts { get; set; }
+        public DbSet<Question> Questions { get; set; }
     }
 }
