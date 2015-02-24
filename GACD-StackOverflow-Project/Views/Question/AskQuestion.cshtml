@@ -4,14 +4,14 @@
     ViewBag.Title = "AskQuestion";
 }
 
-<h2>AskQuestion</h2>
+<h2>MiniStackOverflow</h2>
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>QuestionAskModel</h4>
+        <h4>Ask Question</h4>
         <hr />
         @Html.ValidationSummary(true)
 

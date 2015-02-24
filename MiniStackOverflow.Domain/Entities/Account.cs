@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace MiniStackOverflow.Domain.Entities
 {
@@ -17,6 +18,8 @@ namespace MiniStackOverflow.Domain.Entities
         public string Name { get; set; }
         public string Lastname { get; set; }
         public string Confirm { get; set; }
+
+        public IEnumerable<Question> QuestionEnum { get; set; }
 
     }
 }

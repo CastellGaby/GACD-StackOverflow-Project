@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using MiniStackOverflow.Domain.Entities;
 
 namespace GACD_StackOverflow_Project.Models
 {
@@ -18,5 +19,6 @@ namespace GACD_StackOverflow_Project.Models
         public DateTime CreationDateQuestion { get; set; }
         public int Votes { get; set; }
 
+        public IEnumerable<Question> QuestionEnum { get; set; }
     }
 }

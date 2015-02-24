@@ -17,6 +17,7 @@ namespace GACD_StackOverflow_Project.Controllers
         // GET: /Question/
         public ActionResult Index()
         {
+
             
             List<QuestionListModel> models = new ListStack<QuestionListModel>();
             QuestionListModel modelTest = new QuestionListModel();
@@ -39,6 +40,8 @@ namespace GACD_StackOverflow_Project.Controllers
             models.Add(model2);
 
             return View(models);
+            
+            
 
 
 
@@ -65,5 +68,7 @@ namespace GACD_StackOverflow_Project.Controllers
             context.SaveChanges();
             return RedirectToAction("Index", "Question");
         }
-	}
+
+        
+    }
 }
