@@ -15,7 +15,7 @@ namespace MiniStackOverflow.Domain.Entities
         }
         public string Title { get; set; }
         public string Description { get; set; }
-        public Account OwnerUsername { get; set; }
+        public Guid OwnerUsername { get; set; }
         public DateTime CreationDate { get; set; }
         public int Votes { get; set; }
     }

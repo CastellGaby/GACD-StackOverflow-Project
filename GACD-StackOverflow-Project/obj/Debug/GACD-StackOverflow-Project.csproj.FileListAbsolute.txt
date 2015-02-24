@@ -190,3 +190,5 @@ C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-P
 C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\GACD-StackOverflow-Project\bin\MiniStackOverflow.Domain.dll
 C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\GACD-StackOverflow-Project\bin\MiniStackOverflow.DataDeployed.pdb
 C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\GACD-StackOverflow-Project\bin\MiniStackOverflow.Domain.pdb
+C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\GACD-StackOverflow-Project\bin\Machine.Specifications.Clr4.dll
+C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\GACD-StackOverflow-Project\bin\Machine.Specifications.dll

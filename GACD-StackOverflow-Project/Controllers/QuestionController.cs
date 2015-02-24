@@ -4,7 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Antlr.Runtime.Misc;
+using AutoMapper;
 using GACD_StackOverflow_Project.Models;
+using MiniStackOverflow.DataDeployed;
+using MiniStackOverflow.Domain.Entities;
 
 namespace GACD_StackOverflow_Project.Controllers
 {
@@ -14,7 +17,7 @@ namespace GACD_StackOverflow_Project.Controllers
         // GET: /Question/
         public ActionResult Index()
         {
-
+            
             List<QuestionListModel> models = new ListStack<QuestionListModel>();
             QuestionListModel modelTest = new QuestionListModel();
             modelTest.Title = "Why so serius?";
@@ -34,8 +37,10 @@ namespace GACD_StackOverflow_Project.Controllers
             model2.QuestionId = Guid.NewGuid();
 
             models.Add(model2);
-            //return View(new List<QuestionListModel>());
+
             return View(models);
+
+
 
         }
 
@@ -46,9 +51,19 @@ namespace GACD_StackOverflow_Project.Controllers
         }
 
         [HttpPost]
-        public ActionResult AskQuestion(QuestionAskModel model)
+        public ActionResult AskQuestion(QuestionAskModel modelAskQ)
         {
-            return View(model);
+            AutoMapper.Mapper.CreateMap<Question, QuestionAskModel>().ReverseMap();
+            Question newQuestion = AutoMapper.Mapper.Map<QuestionAskModel, Question>(modelAskQ);
+            var question = Mapper.Map<QuestionAskModel, Question>(modelAskQ);
+
+            var context = new MiniStackOverflowContext();
+            context.Questions.Add(question);
+            question.CreationDate = DateTime.Now;
+            context.Questions.Add(question);
+            
+            context.SaveChanges();
+            return RedirectToAction("Index", "Question");
         }
 	}
 }
