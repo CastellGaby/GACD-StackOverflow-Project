@@ -15,14 +15,22 @@ namespace GACD_StackOverflow_Project.Controllers
     {
         //
         // GET: /Question/
+
+        UnitOfWork unitOfWork=new UnitOfWork();
         public ActionResult Index()
         {
 
             List<QuestionListModel> models = new ListStack<QuestionListModel>();
-            var context = new MiniStackOverflowContext();
+            
             //De la entidad Question lo guardo a un Modelo QuestionList
             Mapper.CreateMap<Question, QuestionListModel>();
-           
+            var questions = unitOfWork.QuestionRepository.Get();
+
+            foreach (var quest in questions )
+            {
+                var qmodel = Mapper.Map<Question, QuestionListModel>(quest);
+                models.Add(qmodel);
+            }
 
             return View(models);
 

@@ -17,7 +17,7 @@ namespace GACD_StackOverflow_Project.Models
         public string OwnerUsername { get; set; }
         [Required(ErrorMessage = "*Is required a description for your question")]
         [DataType(DataType.DateTime)]
-        public DateTime CreationDateQuestion { get; set; }
+        public DateTime CreationDate { get; set; }
         public int Votes { get; set; }
 
         public IEnumerable<Question> QuestionEnum { get; set; }
