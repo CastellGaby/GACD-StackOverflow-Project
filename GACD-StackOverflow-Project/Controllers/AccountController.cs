@@ -42,7 +42,7 @@ namespace GACD_StackOverflow_Project.Controllers
         {
 
             var context = new MiniStackOverflowContext();
-            var account = context.Accounts.FirstOrDefault(x => x.E_mail == modelLogin.E_mail && x.Password == modelLogin.Password);
+            var account = context.Accounts.FirstOrDefault(x => x.Email == modelLogin.E_mail && x.Password == modelLogin.Password);
             if (account != null)
             {
                 FormsAuthentication.SetAuthCookie(modelLogin.E_mail, false);
@@ -100,11 +100,12 @@ namespace GACD_StackOverflow_Project.Controllers
             return View(modelPasswprdRecovery);
         }
 
-        /*----------------Profile------------------------------------*/
-        public ActionResult Profile()
+        /*----------------ViewProfile------------------------------------*/
+        public ActionResult ViewProfile()
         {
             var model = new AccountProfileModel();
             return View(model);
+            
         }
     }
 }

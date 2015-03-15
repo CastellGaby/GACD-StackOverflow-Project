@@ -17,7 +17,7 @@ namespace GACD_StackOverflow_Project.Models
         public string Username { get; set; }
         [Required]
         [DataType(DataType.EmailAddress)]
-        public string E_mail { get; set; }
+        public string Email { get; set; }
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }

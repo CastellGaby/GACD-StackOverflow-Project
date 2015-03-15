@@ -18,7 +18,6 @@ namespace GACD_StackOverflow_Project.Controllers
         public ActionResult Index()
         {
 
-            
             List<QuestionListModel> models = new ListStack<QuestionListModel>();
             QuestionListModel modelTest = new QuestionListModel();
             modelTest.Title = "Why so serius?";
@@ -40,10 +39,6 @@ namespace GACD_StackOverflow_Project.Controllers
             models.Add(model2);
 
             return View(models);
-            
-            
-
-
 
         }
 

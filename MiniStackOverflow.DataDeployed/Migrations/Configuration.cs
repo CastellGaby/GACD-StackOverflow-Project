@@ -10,7 +10,6 @@ namespace MiniStackOverflow.DataDeployed.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "MiniStackOverflow.DataDeployed.MiniStackOverflowContext";
         }
 
         protected override void Seed(MiniStackOverflow.DataDeployed.MiniStackOverflowContext context)
