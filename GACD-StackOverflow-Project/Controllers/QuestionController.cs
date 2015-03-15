@@ -19,24 +19,10 @@ namespace GACD_StackOverflow_Project.Controllers
         {
 
             List<QuestionListModel> models = new ListStack<QuestionListModel>();
-            QuestionListModel modelTest = new QuestionListModel();
-            modelTest.Title = "Why so serius?";
-            modelTest.OwnerUsername= "CastellDraco";
-            modelTest.Votes = 1;
-            modelTest.CreationDateQuestion = DateTime.Now;
-            modelTest.OwnerUserId = Guid.NewGuid();
-            modelTest.QuestionId = Guid.NewGuid();
-
-            models.Add(modelTest);
-            QuestionListModel model2 = new QuestionListModel();
-            model2.Title = "How do a excersice";
-            model2.OwnerUsername = "LoboAcompañado";
-            model2.Votes = 1;
-            model2.CreationDateQuestion = DateTime.Now;
-            model2.OwnerUserId = Guid.NewGuid();
-            model2.QuestionId = Guid.NewGuid();
-
-            models.Add(model2);
+            var context = new MiniStackOverflowContext();
+            //De la entidad Question lo guardo a un Modelo QuestionList
+            Mapper.CreateMap<Question, QuestionListModel>();
+           
 
             return View(models);
 
