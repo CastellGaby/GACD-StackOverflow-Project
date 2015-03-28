@@ -10,43 +10,41 @@
 
 <div>@Html.Partial("_MenuPartial")</div>
 <hr>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OwnerUsername)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreationDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Votes)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.ActionLink(item.Title, "AskQuestion", new { id = item.QuestionId })
-           @*@Html.DisplayFor(modelItem => item.Title)*@ 
-        </td>
-        <td>
-            @Html.ActionLink(item.OwnerUsername, "ViewProfile", "Account",new { id = item.QuestionId },null)
-            @*@Html.DisplayFor(modelItem => item.OwnerUsername)*@
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreationDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Votes)
-        </td>
-        <td>
-            @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })*@ 
-        </td>
-    </tr>
+
+
+@foreach (var item in Model)
+{
+    <table>
+        <tr>
+            <td align="center" border="1"><h2>0</h2></td>
+            <td rowspan="2" >
+                <ul type="none">
+                    <div>
+                        <li>
+                            <h2>@Html.ActionLink(item.Title, "AskQuestion", new { id = item.QuestionId })</h2>
+                            @*@Html.DisplayFor(modelItem => item.Title)*@
+                        </li>
+                        <li>
+                            @Html.ActionLink(item.OwnerUsername, "ViewProfile", "Account", new { id = item.QuestionId }, null)
+                            @*@Html.DisplayFor(modelItem => item.OwnerUsername)*@
+                        </li>
+                        <li>
+                            @Html.DisplayFor(modelItem => item.CreationDate)
+                        </li>
+                        <li>
+                            @Html.DisplayFor(modelItem => item.Votes)
+                        </li>
+                        <li>
+                            @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })*@
+                        </li>
+                    </div>
+                </ul>
+            </td>
+        </tr>
+
+        <tr>
+         <td><h5>Answer</h5></td>
+        </tr>
+    </table>
 }
-
-</table>

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Antlr.Runtime.Misc;
 using AutoMapper;
 using GACD_StackOverflow_Project.Models;
+using Microsoft.Owin.Security;
 using MiniStackOverflow.DataDeployed;
 using MiniStackOverflow.Domain.Entities;
 
@@ -57,7 +58,16 @@ namespace GACD_StackOverflow_Project.Controllers
             context.SaveChanges();
             return RedirectToAction("Index", "Question");
         }
-
-        
+        /*
+        public ActionResult VotesUpQuestion()
+        {
+            
+        }
+        /*
+        public ActionResult AnswerQuestion(AnswerQuestionModel model)
+        {
+            //unitOfWork.AnswerRepository.Insert();
+        }
+        */
     }
 }

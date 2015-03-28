@@ -10,5 +10,3 @@ C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-P
 C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\MiniStackOverflow.DataDeployed\bin\Debug\MiniStackOverflow.DataDeployed.dll.config
 C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\MiniStackOverflow.DataDeployed\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\MiniStackOverflow.DataDeployed\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\MiniStackOverflow.DataDeployed\obj\Debug\MiniStackOverflow.DataDeployed.Migrations.initial.resources
-C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\MiniStackOverflow.DataDeployed\obj\Debug\MiniStackOverflow.DataDeployed.csproj.GenerateResource.Cache

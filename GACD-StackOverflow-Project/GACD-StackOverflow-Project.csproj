@@ -192,6 +192,7 @@
     <Compile Include="Models\AccountProfileModel.cs" />
     <Compile Include="Models\AccountRegisterModel.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AnswerQuestionModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\QuestionAskModel.cs" />
     <Compile Include="Models\QuestionDetailModel.cs" />

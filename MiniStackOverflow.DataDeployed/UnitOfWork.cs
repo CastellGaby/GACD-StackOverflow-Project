@@ -13,7 +13,7 @@ namespace MiniStackOverflow.DataDeployed
         private MiniStackOverflowContext context = new MiniStackOverflowContext();
         private GenericRepository<Account> accountRepository;
         private GenericRepository<Question> questionRepository;
-        //private GenericRepository<Answer> answerRepository;
+        private GenericRepository<Answer> answerRepository;
 
         public GenericRepository<Account> AccountRepository
         {
@@ -38,6 +38,18 @@ namespace MiniStackOverflow.DataDeployed
                     this.questionRepository = new GenericRepository<Question>(context);
                 }
                 return questionRepository;
+            }
+        }
+        public GenericRepository<Answer> AnswerRepository
+        {
+            get
+            {
+
+                if (this.answerRepository == null)
+                {
+                    this.answerRepository = new GenericRepository<Answer>(context);
+                }
+                return answerRepository;
             }
         }
 
