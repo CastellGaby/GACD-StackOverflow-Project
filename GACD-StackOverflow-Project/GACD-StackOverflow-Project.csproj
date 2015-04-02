@@ -190,6 +190,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504021627424_initial.cs" />
+    <Compile Include="Migrations\201504021627424_initial.Designer.cs">
+      <DependentUpon>201504021627424_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountLoginModel.cs" />
     <Compile Include="Models\AccountPasswordRecoveryModel.cs" />
     <Compile Include="Models\AccountProfileModel.cs" />
@@ -273,6 +278,11 @@
       <Project>{AE549239-A973-4ECB-B34C-1ABAD5B13214}</Project>
       <Name>MiniStackOverflow.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201504021627424_initial.resx">
+      <DependentUpon>201504021627424_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
