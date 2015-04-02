@@ -13,6 +13,7 @@ using Microsoft.Owin.Security;
 using GACD_StackOverflow_Project.Models;
 using MiniStackOverflow.DataDeployed;
 using MiniStackOverflow.Domain.Entities;
+using RestSharp;
 
 namespace GACD_StackOverflow_Project.Controllers
 {
@@ -99,7 +100,21 @@ namespace GACD_StackOverflow_Project.Controllers
         {
             return View(modelPasswprdRecovery);
         }
+        /*-------------------ResetPasswor-----------------------------*/
+        public ActionResult ResetPassword()
+        {
+            var model = new AccountResetPasswordModel();
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult ResetPassword(AccountResetPasswordModel modelResetPassword)
+        {
+            return View(modelResetPassword);
+        }
 
+        
+        /*--------------------Mailgun------------------------------------*/
+       
         /*----------------ViewProfile------------------------------------*/
         public ActionResult ViewProfile()
         {

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Antlr.Runtime.Misc;
 using AutoMapper;
 using GACD_StackOverflow_Project.Models;
+using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using MiniStackOverflow.DataDeployed;
 using MiniStackOverflow.Domain.Entities;
@@ -16,7 +17,7 @@ namespace GACD_StackOverflow_Project.Controllers
     {
         //
         // GET: /Question/
-
+        
         UnitOfWork unitOfWork=new UnitOfWork();
         public ActionResult Index()
         {
@@ -25,11 +26,14 @@ namespace GACD_StackOverflow_Project.Controllers
             
             //De la entidad Question lo guardo a un Modelo QuestionList
             Mapper.CreateMap<Question, QuestionListModel>();
+            
             var questions = unitOfWork.QuestionRepository.Get();
-
+           
             foreach (var quest in questions )
             {
+
                 var qmodel = Mapper.Map<Question, QuestionListModel>(quest);
+                
                 models.Add(qmodel);
             }
 
@@ -51,23 +55,24 @@ namespace GACD_StackOverflow_Project.Controllers
             var question = Mapper.Map<QuestionAskModel, Question>(modelAskQ);
 
             var context = new MiniStackOverflowContext();
-            context.Questions.Add(question);
+            //context.Questions.Add(question);
             question.CreationDate = DateTime.Now;
+            question.OwnerUserId = Guid.Parse(HttpContext.User.Identity.Name);
             context.Questions.Add(question);
             
             context.SaveChanges();
             return RedirectToAction("Index", "Question");
         }
-        /*
-        public ActionResult VotesUpQuestion()
+
+        /*public ActionResult QuestionVotesUp()
         {
             
         }
-        /*
+        
         public ActionResult AnswerQuestion(AnswerQuestionModel model)
         {
             //unitOfWork.AnswerRepository.Insert();
-        }
-        */
+        }*/
+        
     }
 }

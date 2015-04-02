@@ -192,3 +192,5 @@ C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-P
 C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\GACD-StackOverflow-Project\bin\MiniStackOverflow.Domain.pdb
 C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\GACD-StackOverflow-Project\bin\Machine.Specifications.Clr4.dll
 C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\GACD-StackOverflow-Project\bin\Machine.Specifications.dll
+C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\GACD-StackOverflow-Project\bin\RestSharp.dll
+C:\Users\CastellDraco\Documents\Visual Studio 2013\Projects\GACD-StackOverflow-Project\GACD-StackOverflow-Project\bin\RestSharp.xml

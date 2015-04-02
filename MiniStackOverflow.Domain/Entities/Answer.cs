@@ -16,6 +16,6 @@ namespace MiniStackOverflow.Domain.Entities
         public int Votes { get; set; }
         public Guid AccountId { get; set; }
         public Guid QuestionId { get; set; }
-        public bool Correct { get; set; }
+        public bool CorrectAnswer { get; set; }
     }
 }
