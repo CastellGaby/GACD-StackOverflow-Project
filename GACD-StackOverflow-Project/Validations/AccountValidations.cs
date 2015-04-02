@@ -14,6 +14,6 @@ namespace GACD_StackOverflow_Project.Validations
         public static bool ConfirmPassword(string password, string confirm)
         {
             return false;
-        }
+        }//Ya esta limpio
     }
 }
