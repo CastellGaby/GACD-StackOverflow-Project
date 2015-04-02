@@ -24,7 +24,7 @@ namespace GACD_StackOverflow_Project
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/cyborg.css",
                       "~/Content/site.css"));
         }
     }
